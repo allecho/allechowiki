@@ -8,6 +8,8 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
+import sphinx_rtd_theme
+import recommonmark
 
 project = 'allechowiki'
 copyright = '2024, JonLee'
@@ -23,6 +25,8 @@ extensions = [
 ]
 
 # added support for .md doc
+from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
 source_parsers = {
     '.md': 'recommonmark.parser.CommonMarkParser',
 }
