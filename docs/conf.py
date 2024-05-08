@@ -23,8 +23,6 @@ extensions = [
 ]
 
 # added support for .md doc
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
 source_parsers = {
     '.md': 'recommonmark.parser.CommonMarkParser',
 }
