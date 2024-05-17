@@ -5,13 +5,8 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-import os
-import sys
-sys.path.insert(0, os.path.abspath('.'))
-import sphinx_rtd_theme
-import recommonmark
 
-project = 'allechowiki'
+project = 'Allecho'
 copyright = '2024, JonLee'
 author = 'JonLee'
 release = '1.0'
@@ -20,17 +15,9 @@ release = '1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-        'recommonmark',
-        'sphinx_markdown_tables'
+	'recommonmark',
+	'sphinx_markdown_tables'
 ]
-
-# added support for .md doc
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
-source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
-}
-source_suffix = ['.rst', '.md']
 
 templates_path = ['_templates']
 exclude_patterns = []
